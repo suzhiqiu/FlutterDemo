@@ -28,6 +28,8 @@ import '9.2AnimationRoute.dart';
 import '9.3PageRoute.dart';
 import '9.4HeroRoute.dart';
 import '14.5ImageCacheRoute.dart';
+import '12.2PlatformRoute.dart';
+import '12.3PluginRoute.dart';
 
 void main() =>  runApp(new MyApp());
 
@@ -65,6 +67,8 @@ class MyApp extends StatelessWidget {
         "NotificationRoute" : (context) =>NotificationRoute(),// 8.4
         "AnimationRoute" : (context) =>AnimationRoute(),// 9.2
         "HeroRoute"  : (context) =>HeroRoute(),// 9.2
+        "PlatformRoute"  : (context) =>PlatformRoute(),// 12.2
+        "PluginRoute" : (context) =>PluginRoute(),// 12.3
         "ImageCacheRoute"  : (context) =>ImageCacheRoute(),// 14.5
       },
       //钩子
@@ -113,8 +117,10 @@ class RandomWordsStae extends State<RandomWords> {
               onPressed: ()  {
                 print("点击...");
 
+
+
                 //通过路由表
-                Navigator.pushNamed(context, 'ImageCacheRoute');
+                Navigator.pushNamed(context, 'PluginRoute');
 
 
 //
