@@ -27,10 +27,18 @@ import '8.4NotificationRoute.dart';
 import '9.2AnimationRoute.dart';
 import '9.3PageRoute.dart';
 import '9.4HeroRoute.dart';
+import '9.5StaggerAnimateRoute.dart';
+import '9.6AnimatedSwitcherRoute.dart';
+import '9.7AnimatedDecoratedBoxRoute.dart';
+import '10.2GradientButtonRoute.dart';
+import '10.3TurnBoxRoute.dart';
+import '10.4CustomPaintRoute.dart';
+import '10.5CircularProgressRoute.dart';
 import '11.1FileOperationRoute.dart';
 import '11.2HttpClientRoute.dart';
 import '11.3DioRoute.dart';
 import '11.5WebSocketRoute.dart';
+import '11.6SocketAPIRoute.dart';
 import '12.2PlatformRoute.dart';
 import '12.3PluginRoute.dart';
 import '14.5ImageCacheRoute.dart';
@@ -73,10 +81,18 @@ class MyApp extends StatelessWidget {
         "NotificationRoute" : (context) =>NotificationRoute(),// 8.4
         "AnimationRoute" : (context) =>AnimationRoute(),// 9.2
         "HeroRoute"  : (context) =>HeroRoute(),// 9.2
+        "StaggerAnimateRoute"  : (context) =>StaggerAnimateRoute(),// 9.5
+        "AnimatedSwitcherRoute"  : (context) =>AnimatedSwitcherRoute(),// 9.6
+        "AnimatedDecoratedBoxRoute"  : (context) =>AnimatedDecoratedBoxRoute(),// 9.7
+        "GradientButtonRoute"  : (context) =>GradientButtonRoute(),// 10.2
+        "TurnBoxRoute"  : (context) =>TurnBoxRoute(),// 10.3
+        "CustomPaintRoute"  : (context) =>CustomPaintRoute(),// 10.4
+        "GradientCircularProgressRoute"  : (context) =>GradientCircularProgressRoute(),// 10.4
         "FileOperationRoute"  : (context) =>FileOperationRoute(),// 11.1
         "HttpClientRoute"  : (context) =>HttpClientRoute(),// 11.2
         "DioRoute"  : (context) =>DioRoute(),// 11.3
         "WebSocketRoute"  : (context) =>WebSocketRoute(),// 11.5
+        "SocketAPIRoute"  : (context) =>SocketAPIRoute(),// 11.6
         "PlatformRoute"  : (context) =>PlatformRoute(),// 12.2
         "PluginRoute" : (context) =>PluginRoute(),// 12.3
         "ImageCacheRoute"  : (context) =>ImageCacheRoute(),// 14.5
@@ -139,7 +155,7 @@ class RandomWordsStae extends State<RandomWords> {
                 print("点击...");
 
                 //通过路由表
-                Navigator.pushNamed(context, 'WebSocketRoute');
+                Navigator.pushNamed(context, 'GradientCircularProgressRoute');
 
 
 
