@@ -27,9 +27,15 @@ import '8.4NotificationRoute.dart';
 import '9.2AnimationRoute.dart';
 import '9.3PageRoute.dart';
 import '9.4HeroRoute.dart';
-import '14.5ImageCacheRoute.dart';
+import '11.1FileOperationRoute.dart';
+import '11.2HttpClientRoute.dart';
+import '11.3DioRoute.dart';
+import '11.5WebSocketRoute.dart';
 import '12.2PlatformRoute.dart';
 import '12.3PluginRoute.dart';
+import '14.5ImageCacheRoute.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+
 
 void main() =>  runApp(new MyApp());
 
@@ -67,6 +73,10 @@ class MyApp extends StatelessWidget {
         "NotificationRoute" : (context) =>NotificationRoute(),// 8.4
         "AnimationRoute" : (context) =>AnimationRoute(),// 9.2
         "HeroRoute"  : (context) =>HeroRoute(),// 9.2
+        "FileOperationRoute"  : (context) =>FileOperationRoute(),// 11.1
+        "HttpClientRoute"  : (context) =>HttpClientRoute(),// 11.2
+        "DioRoute"  : (context) =>DioRoute(),// 11.3
+        "WebSocketRoute"  : (context) =>WebSocketRoute(),// 11.5
         "PlatformRoute"  : (context) =>PlatformRoute(),// 12.2
         "PluginRoute" : (context) =>PluginRoute(),// 12.3
         "ImageCacheRoute"  : (context) =>ImageCacheRoute(),// 14.5
@@ -79,6 +89,17 @@ class MyApp extends StatelessWidget {
 
         });
       },
+
+      localizationsDelegates: [
+        // 本地化的代理类
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        const Locale('en', 'US'), // 美国英语
+        const Locale('zh', 'CN'), // 中文简体
+        //其它Locales
+      ],
 
 
       home: new Scaffold(
@@ -117,10 +138,10 @@ class RandomWordsStae extends State<RandomWords> {
               onPressed: ()  {
                 print("点击...");
 
-
-
                 //通过路由表
-                Navigator.pushNamed(context, 'PluginRoute');
+                Navigator.pushNamed(context, 'WebSocketRoute');
+
+
 
 
 //
