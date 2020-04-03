@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import '10.5CircularProgress.dart';
+import 'package:flutter_app/demo/10.5CircularProgress.dart';
 
 class GradientCircularProgressRoute extends StatefulWidget {
   @override

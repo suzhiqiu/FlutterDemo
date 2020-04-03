@@ -2,50 +2,54 @@ import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 import 'package:flutter_app/NewRoute.dart';
 import 'package:flutter_app/RouteTable.dart';
-import 'package:flutter_app/5.1PaddingRoute.dart';
-import 'package:flutter_app/5.2ConstrainedBoxRoute.dart';
-import 'package:flutter_app/5.3DecoratedBoxRoute.dart';
-import 'package:flutter_app/5.4TransformRoute.dart';
-import 'package:flutter_app/5.5ContainerRoute.dart';
-import '5.6ScaffoldRoute.dart';
-import '5.7ClipRoute.dart';
-import '6.2SingleChildScrollView.dart';
-import '6.3ListViewRoute.dart';
-import '6.4GridViewRoute.dart';
-import '6.5CustomScrollViewRoute.dart';
-import '6.6ScrollControllerRoute.dart';
-import '7.1WillPopScopeRoute.dart';
-import '7.2ShareDataRoute.dart';
-import '7.4ThemeRoute.dart';
-import '7.5FutureBuilderRoute.dart';
-import '7.6DialogRoute.dart';
-import '8.1PointerEventRoute.dart';
-import '8.2GestureDetectorRoute.dart';
-import '8.3EventBus.dart';
-import '8.3EventBusRoute.dart';
-import '8.4NotificationRoute.dart';
-import '9.2AnimationRoute.dart';
-import '9.3PageRoute.dart';
-import '9.4HeroRoute.dart';
-import '9.5StaggerAnimateRoute.dart';
-import '9.6AnimatedSwitcherRoute.dart';
-import '9.7AnimatedDecoratedBoxRoute.dart';
-import '10.2GradientButtonRoute.dart';
-import '10.3TurnBoxRoute.dart';
-import '10.4CustomPaintRoute.dart';
-import '10.5CircularProgressRoute.dart';
-import '11.1FileOperationRoute.dart';
-import '11.2HttpClientRoute.dart';
-import '11.3DioRoute.dart';
-import '11.5WebSocketRoute.dart';
-import '11.6SocketAPIRoute.dart';
-import '12.2PlatformRoute.dart';
-import '12.3PluginRoute.dart';
-import '14.5ImageCacheRoute.dart';
+import 'package:flutter_app/demo/5.1PaddingRoute.dart';
+import 'package:flutter_app/demo/5.2ConstrainedBoxRoute.dart';
+import 'package:flutter_app/demo/5.3DecoratedBoxRoute.dart';
+import 'package:flutter_app/demo/5.4TransformRoute.dart';
+import 'package:flutter_app/demo/5.5ContainerRoute.dart';
+import 'package:flutter_app/demo/5.6ScaffoldRoute.dart';
+import 'package:flutter_app/demo/5.7ClipRoute.dart';
+import 'package:flutter_app/demo/6.2SingleChildScrollView.dart';
+import 'package:flutter_app/demo/6.3ListViewRoute.dart';
+import 'package:flutter_app/demo/6.4GridViewRoute.dart';
+import 'package:flutter_app/demo/6.5CustomScrollViewRoute.dart';
+import 'package:flutter_app/demo/6.6ScrollControllerRoute.dart';
+import 'package:flutter_app/demo/7.1WillPopScopeRoute.dart';
+import 'package:flutter_app/demo/7.2ShareDataRoute.dart';
+import 'package:flutter_app/demo/7.4ThemeRoute.dart';
+import 'package:flutter_app/demo/7.5FutureBuilderRoute.dart';
+import 'package:flutter_app/demo/7.6DialogRoute.dart';
+import 'package:flutter_app/demo/8.1PointerEventRoute.dart';
+import 'package:flutter_app/demo/8.2GestureDetectorRoute.dart';
+import 'package:flutter_app/demo/8.3EventBus.dart';
+import 'package:flutter_app/demo/8.3EventBusRoute.dart';
+import 'package:flutter_app/demo/8.4NotificationRoute.dart';
+import 'package:flutter_app/demo/9.2AnimationRoute.dart';
+import 'package:flutter_app/demo/9.3PageRoute.dart';
+import 'package:flutter_app/demo/9.4HeroRoute.dart';
+import 'package:flutter_app/demo/9.5StaggerAnimateRoute.dart';
+import 'package:flutter_app/demo/9.6AnimatedSwitcherRoute.dart';
+import 'package:flutter_app/demo/9.7AnimatedDecoratedBoxRoute.dart';
+import 'package:flutter_app/demo/10.2GradientButtonRoute.dart';
+import 'package:flutter_app/demo/10.3TurnBoxRoute.dart';
+import 'package:flutter_app/demo/10.4CustomPaintRoute.dart';
+import 'package:flutter_app/demo/10.5CircularProgressRoute.dart';
+import 'package:flutter_app/demo/11.1FileOperationRoute.dart';
+import 'package:flutter_app/demo/11.2HttpClientRoute.dart';
+import 'package:flutter_app/demo/11.3DioRoute.dart';
+import 'package:flutter_app/demo/11.5WebSocketRoute.dart';
+import 'package:flutter_app/demo/11.6SocketAPIRoute.dart';
+import 'package:flutter_app/demo/12.2PlatformRoute.dart';
+import 'package:flutter_app/demo/12.3PluginRoute.dart';
+import 'package:flutter_app/demo/14.5ImageCacheRoute.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'package:flutter_app/Entrance/page.dart';
+import 'app.dart';
 
-void main() =>  runApp(new MyApp());
+void main() => runApp(createApp());
+
+//void main() =>  runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
 
@@ -96,6 +100,8 @@ class MyApp extends StatelessWidget {
         "PlatformRoute"  : (context) =>PlatformRoute(),// 12.2
         "PluginRoute" : (context) =>PluginRoute(),// 12.3
         "ImageCacheRoute"  : (context) =>ImageCacheRoute(),// 14.5
+
+       // "EntrancePage"  : (context) =>EntrancePage(),// 14.5
       },
       //钩子
       onGenerateRoute: (RouteSettings settings){
@@ -155,7 +161,7 @@ class RandomWordsStae extends State<RandomWords> {
                 print("点击...");
 
                 //通过路由表
-                Navigator.pushNamed(context, 'GradientCircularProgressRoute');
+                Navigator.pushNamed(context, 'EntrancePage');
 
 
 
