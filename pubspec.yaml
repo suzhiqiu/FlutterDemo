@@ -33,6 +33,9 @@ dependencies:
   crypto: ^3.0.0
   shared_preferences: ^2.0.5
   flutter_screenutil: ^4.0.4
+  fluttertoast: ^8.0.3
+  flutter_swiper: ^1.1.6
+
   #bloc
   flutter_bloc: ^7.0.0
   equatable: ^2.0.0

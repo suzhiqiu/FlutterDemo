@@ -50,11 +50,12 @@ class _TabsState extends State<Tabs> {
           this._pageController.jumpToPage(index);
         },
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: '首页'),
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: '分类'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: '首页'),
+          BottomNavigationBarItem(icon: Icon(Icons.category), label: '分类'),
           BottomNavigationBarItem(
               icon: Icon(Icons.shopping_cart), label: '购物车'),
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: '我的'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.my_library_add), label: '我的'),
         ],
       ),
     );
