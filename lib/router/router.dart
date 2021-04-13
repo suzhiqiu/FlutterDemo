@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/counter/counter_page.dart';
 import '../pages/tabs/tab.dart';
 import '../pages/home/homePage.dart';
 import '../pages/category/categoryPage.dart';
@@ -12,6 +13,8 @@ final routes = {
   '/category': (context) => CategoryPage(),
   '/cart': (context) => CartPage(),
   '/my': (context) => MyPage(),
+  //bloc相关页面
+  '/counter': (context) => CounterPage(),
 };
 
 //固定写法
