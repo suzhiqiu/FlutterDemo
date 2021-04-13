@@ -27,7 +27,7 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  #https://pub.dev/packages
+  #国内镜像https://pub.flutter-io.cn/
   cupertino_icons: ^1.0.2
   dio: ^4.0.0
   crypto: ^3.0.0
@@ -35,21 +35,26 @@ dependencies:
   flutter_screenutil: ^4.0.4
   fluttertoast: ^8.0.3
   flutter_swiper: ^1.1.6
+  flutter_easyrefresh: ^2.2.0
 
-  #bloc
+  #bloc 中文网站 https://bloclibrary.dev/#/zh-cn/
+  #bloc 英文网站 https://bloclibrary.dev/
+  bloc: ^7.0.0
   flutter_bloc: ^7.0.0
   equatable: ^2.0.0
   #
   event_bus: ^2.0.0
+  #序列化-注解
   json_annotation: ^4.0.1
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  #
-  build_runner: ^1.12.2
+  #序列化
   json_serializable: ^4.1.0
+  build_runner: ^1.12.2
+ 
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
