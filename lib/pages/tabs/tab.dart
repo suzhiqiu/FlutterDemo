@@ -20,6 +20,8 @@ class _TabsState extends State<Tabs> {
   void initState() {
     super.initState();
     this._pageController = new PageController(initialPage: this._currentIndex);
+    //
+    // ScreenUtil.init(constraints)
   }
 
   List<Widget> widgets = [

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../widget/toast.dart';
+import 'homeSwipe.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -11,11 +11,23 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   TextEditingController textController = TextEditingController();
 
+  List images = [
+    'http://via.placeholder.com/350x150',
+    'http://via.placeholder.com/350x150',
+    'http://via.placeholder.com/350x150'
+  ];
+
   void showDlg() {
-    print(textController.text);
-    showDialog(
-        context: context,
-        builder: (context) => AlertDialog(title: Text('美女类型不能为空')));
+    // images.clear();
+    // images.add('1');
+    // images.add('2');
+    print('items:===>' + '$images');
+    print('items[index]:===>' + '${images[1]}');
+
+    // print(textController.text);
+    // showDialog(
+    //     context: context,
+    //     builder: (context) => AlertDialog(title: Text('美女类型不能为空')));
   }
 
   @override
@@ -33,6 +45,7 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         child: Column(
           children: [
+            HomeSwipe(items: images),
             TextField(
               controller: textController,
               decoration: InputDecoration(
