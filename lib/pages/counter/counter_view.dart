@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/counter/bloc/counter_bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CounterView extends StatefulWidget {
   CounterView({Key key}) : super(key: key);
@@ -15,12 +17,23 @@ class _CounterViewState extends State<CounterView> {
       body: Center(
         child: Column(
           children: [
+            //2.
+            BlocBuilder<CounterBloc, CounterState>(
+              builder: (context, state) {
+                return Text('${state.value}');
+              },
+            ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                //3.
+                BlocProvider.of<CounterBloc>(context).add(CounterAddEvent());
+              },
               child: Text('加法'),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                BlocProvider.of<CounterBloc>(context).add(CounterSubEvent());
+              },
               child: Text('减法'),
             )
           ],
