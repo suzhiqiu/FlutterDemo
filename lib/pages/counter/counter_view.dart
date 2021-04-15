@@ -19,6 +19,7 @@ class _CounterViewState extends State<CounterView> {
           children: [
             //2.
             BlocBuilder<CounterBloc, CounterState>(
+              //操纵的数据
               builder: (context, state) {
                 return Text('${state.value}');
               },
