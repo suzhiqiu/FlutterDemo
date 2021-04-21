@@ -1,7 +1,10 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/counter/bloc/color_bloc.dart';
 import 'package:flutter_app/pages/counter/bloc/counter_bloc.dart';
+import 'package:flutter_app/widget/toast.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class CounterMulView extends StatefulWidget {
   CounterMulView({Key key}) : super(key: key);
@@ -77,7 +80,21 @@ class _CounterMulViewState extends State<CounterMulView> {
                 BlocProvider.of<ColorBloc>(context).add(CounterGreenEvent());
               },
               child: Text('变绿'),
-            )
+            ),
+            RichText(
+                text: TextSpan(style: TextStyle(fontSize: 18), children: [
+              TextSpan(
+                  text: "登录就同意", style: TextStyle(color: Color(0xAA333333))),
+              TextSpan(
+                  text: "《巴乐兔服务协议》",
+                  style: TextStyle(color: Color(0xAACE1928)),
+                  // 当用两个.号调用对象的方法或者引用它的属性时，表达式返回的值是该对象本身
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () {
+                      print('跳转隐私协议....');
+                      JToast.info('跳转隐私协议....');
+                    })
+            ]))
           ],
         ),
       ),
