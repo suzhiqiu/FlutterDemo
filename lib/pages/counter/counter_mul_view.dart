@@ -81,6 +81,15 @@ class _CounterMulViewState extends State<CounterMulView> {
               },
               child: Text('变绿'),
             ),
+            //图片加载
+            FadeInImage.assetNetwork(
+              placeholder: 'assets/images/public/image_placeholder.gif',
+              image:
+                  'http://news.xmhouse.com/bd/202104/W020210416619919112455.jpg',
+              height: 50,
+              width: 50,
+            ),
+
             RichText(
                 text: TextSpan(style: TextStyle(fontSize: 18), children: [
               TextSpan(
